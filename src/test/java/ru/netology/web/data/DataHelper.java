@@ -27,4 +27,16 @@ public class DataHelper {
   public static VerificationCode getVerificationCodeFor(AuthInfo authInfo) {
     return new VerificationCode("12345");
   }
+
+  @Value
+  public static class Cards {
+    private String dataTestIdCard1 = "[data-test-id=\"" + "92df3f1c-a033-48e6-8390-206f6b1f56c0" + "]\"";
+    private String numberCard1 = "5559 0000 0000 0001";
+    private String dataTestIdCard2 = "[data-test-id=\"" + "0f3f5c2a-249e-4c3d-8287-09f7a039391d]" + "]\"";
+    private String numberCard2 = "5559 0000 0000 0002";
+    private Cards(){};
+    public static Cards getCards() {
+      return new Cards();
+    }
+  }
 }
